@@ -1,1 +1,14 @@
-<p>Testing</p>
+<div *ngFor="let car of Cars" [ngSwitch]='car.color'>
+  <!-- <div *ngSwitchCase="'blue'" class="blue">
+    Car: {{ car.name }} | Car Color: {{car.color}}
+  </div> -->
+  <div class="{{car.color}}">
+    Car: {{ car.name }} | Car Color: {{car.color}}
+  </div>
+</div>
+
+<!-- <ng-template *ngFor="let car of Cars; let i=index; let odd=odd;">
+  <div>
+    ({{car.color}})
+  </div>
+</ng-template> -->
